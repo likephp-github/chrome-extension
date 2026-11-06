@@ -75,11 +75,29 @@ The content script runs only on youtube.com to listen for the extension's keyboa
 
 ## 圖片素材
 
-| 項目 | 規格 | 來源 |
+素材檔輸出到 `dist/`（不進版控），需要時依下列方式重新產生。商店要求圖片不可有 alpha 透明層，因此截圖與宣傳圖一律轉成 JPEG。
+
+| 欄位 | 檔案 | 產生方式 |
 | --- | --- | --- |
-| 商店圖示 | 128×128 | `icons/icon128.png` |
-| 截圖 | 1280×800 或 640×400，至少 1 張 | `dist/screenshot-1280x800.png`（Big Buck Bunny，CC BY 3.0，說明中需標示出處） |
-| 小型宣傳圖 | 440×280 | 選填，視控制台要求 |
+| 商店圖示 128×128 | `icons/icon128.png` | `npm run icons` |
+| 螢幕截圖 1280×800 | `dist/screenshot-1280x800.jpg` | 手動截圖（Big Buck Bunny，CC BY 3.0，說明中需標示出處），以 `sips` 裁切並轉 JPEG |
+| 小型宣傳圖塊 440×280 | `dist/promo-tile-440x280.jpg` | `tools/promo-tile.html`，見下方指令 |
+| 跑馬燈宣傳圖塊 1400×560 | `dist/marquee-tile-1400x560.jpg` | `tools/marquee-tile.html`，見下方指令 |
+
+```bash
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+"$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 \
+  --window-size=440,280 --screenshot="$PWD/dist/promo.png" "file://$PWD/tools/promo-tile.html"
+sips -s format jpeg dist/promo.png --out dist/promo-tile-440x280.jpg
+# 跑馬燈：改用 --window-size=1400,560 與 tools/marquee-tile.html
+```
+
+## 其他欄位
+
+- **官方網址**：無（需 Search Console 驗證網域）
+- **首頁網址**：https://github.com/likephp-github/chrome-extension/tree/main/youtube-speed-hotkeys
+- **支援網址**：https://github.com/likephp-github/chrome-extension/issues
+- **成人內容**：否
 
 ## 打包與發布
 
