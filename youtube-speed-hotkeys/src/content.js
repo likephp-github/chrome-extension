@@ -96,6 +96,8 @@
   );
   document.addEventListener('yt-navigate-finish', apply);
 
+  console.info('[Speed Hotkeys] loaded');
+
   chrome.storage.local.get(STORAGE_KEY, (result) => {
     if (result && result[STORAGE_KEY]) {
       state = { ...state, ...result[STORAGE_KEY] };

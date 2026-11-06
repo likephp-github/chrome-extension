@@ -40,3 +40,9 @@ test('帶修飾鍵或其他按鍵時不觸發', () => {
   assert.equal(S.actionForKey({ key: ']', metaKey: true }), null);
   assert.equal(S.actionForKey({ key: 'a' }), null);
 });
+
+test('注音輸入法下按 ] 送出全形字元時，仍依實體按鍵判斷', () => {
+  assert.equal(S.actionForKey({ key: '」', code: 'BracketRight' }), 'faster');
+  assert.equal(S.actionForKey({ key: '「', code: 'BracketLeft' }), 'slower');
+  assert.equal(S.actionForKey({ key: 'Process', code: 'Backslash' }), 'toggle');
+});

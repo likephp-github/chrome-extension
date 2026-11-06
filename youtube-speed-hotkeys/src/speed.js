@@ -27,18 +27,13 @@
     return { rate: target, previous };
   }
 
+  // 優先用實體按鍵位置（event.code）判斷，注音等輸入法下 event.key 可能是「」或 Process
+  const CODE_ACTIONS = { BracketRight: 'faster', BracketLeft: 'slower', Backslash: 'toggle' };
+  const KEY_ACTIONS = { ']': 'faster', '[': 'slower', '\\': 'toggle' };
+
   function actionForKey(event) {
     if (event.ctrlKey || event.metaKey || event.altKey) return null;
-    switch (event.key) {
-      case ']':
-        return 'faster';
-      case '[':
-        return 'slower';
-      case '\\':
-        return 'toggle';
-      default:
-        return null;
-    }
+    return CODE_ACTIONS[event.code] || KEY_ACTIONS[event.key] || null;
   }
 
   const api = { MIN, MAX, STEP, DEFAULT, step, toggle, actionForKey };
