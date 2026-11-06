@@ -28,6 +28,7 @@ FEATURES
 • Lightweight: no network requests, no tracking, no data collection
 
 This extension is not affiliated with or endorsed by YouTube or Google.
+Screenshot: "Big Buck Bunny" © Blender Foundation, CC BY 3.0 (peach.blender.org).
 ```
 
 ## 詳細說明 — 中文（繁體）
@@ -48,6 +49,7 @@ This extension is not affiliated with or endorsed by YouTube or Google.
 • 輕量：不發出網路請求、不追蹤、不收集任何資料
 
 本擴充功能與 YouTube 或 Google 無任何關聯，亦未獲其背書。
+截圖影片：〈Big Buck Bunny〉© Blender Foundation，CC BY 3.0（peach.blender.org）。
 ```
 
 ## 隱私權分頁
@@ -76,7 +78,7 @@ The content script runs only on youtube.com to listen for the extension's keyboa
 | 項目 | 規格 | 來源 |
 | --- | --- | --- |
 | 商店圖示 | 128×128 | `icons/icon128.png` |
-| 截圖 | 1280×800 或 640×400，至少 1 張 | 需手動截取（建議截切換速度時畫面上的速度提示） |
+| 截圖 | 1280×800 或 640×400，至少 1 張 | `dist/screenshot-1280x800.png`（Big Buck Bunny，CC BY 3.0，說明中需標示出處） |
 | 小型宣傳圖 | 440×280 | 選填，視控制台要求 |
 
 ## 打包與發布
