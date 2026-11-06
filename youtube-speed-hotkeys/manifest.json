@@ -1,8 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Speed Hotkeys",
+  "name": "__MSG_extName__",
+  "short_name": "__MSG_extShortName__",
   "version": "1.0.0",
-  "description": "在 YouTube 上用快捷鍵切換播放速度：] 加速、[ 減速、\\ 在 1x 與上次速度間切換。",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "permissions": ["storage"],
   "content_scripts": [
     {

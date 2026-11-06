@@ -1,9 +1,11 @@
 {
-  "name": "youtube-speed-hotkeys",
+  "name": "speed-hotkeys-for-youtube",
   "version": "1.0.0",
   "private": true,
   "description": "Chrome extension: YouTube 播放速度快捷鍵",
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "icons": "node tools/generate-icons.js",
+    "zip": "npm test && mkdir -p dist && rm -f dist/$npm_package_name-$npm_package_version.zip && zip -r dist/$npm_package_name-$npm_package_version.zip manifest.json _locales icons src -x '*.DS_Store'"
   }
 }

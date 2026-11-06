@@ -1,0 +1,5 @@
+{
+  "extName": { "message": "Speed Hotkeys for YouTube" },
+  "extShortName": { "message": "Speed Hotkeys" },
+  "extDescription": { "message": "Change YouTube playback speed with keyboard shortcuts: ] faster, [ slower, \\ toggle between 1x and your last speed." }
+}

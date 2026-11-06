@@ -4,4 +4,4 @@
 
 | 目錄 | 說明 |
 | --- | --- |
-| [`youtube-speed-hotkeys`](youtube-speed-hotkeys/) | 在 YouTube 上用快捷鍵切換播放速度 |
+| [`youtube-speed-hotkeys`](youtube-speed-hotkeys/) | Speed Hotkeys for YouTube：在 YouTube 上用快捷鍵切換播放速度 |
